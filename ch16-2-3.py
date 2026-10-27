@@ -9,7 +9,7 @@ client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 def call_llama_model(messages):
     try:
         completion = client.chat.completions.create(
-            model="openai/gpt-oss-120b",
+            model="qwen/qwen3.8-27b",
             messages=messages,
             temperature=0,
             max_completion_tokens=1024,
